@@ -11,6 +11,8 @@ def encrypt(plaText, shift):
 	for character in plaText:
 		# checks if said character is a letter in the alphabet
 		if character in alphabet:
+			# makes the letter lowercase to ensure it stays within the alphabet array
+			character = character.lower()
 			# takes the current letter position and transforms it to the new encrpyted position
 			currentPosition = alphabet.index(character)
 			newPosition = (currentPosition + shift) % len(alphabet)
@@ -18,7 +20,7 @@ def encrypt(plaText, shift):
 			appendLetter = alphabet[newPosition]
 		# if character is NOT a letter, don't encrpyt it (e.g !@#$%^&*())
 		else:
-			character = appendLetter
+			appendLetter = character
 
 		# appends the character to our result
 		encryptedText += appendLetter
@@ -35,12 +37,14 @@ def decrypt(encText, shift):
 
 	for character in encText:
 
+		character = character.lower()
+
 		if character in alphabet:
 			currentPosition = alphabet.index(character)
 			newPosition = (currentPosition - shift) % len(alphabet)
 			appendLetter = alphabet[newPosition]
 		else:
-			character = appendLetter
+			appendLetter = character
 
 		decryptedText += appendLetter
 
