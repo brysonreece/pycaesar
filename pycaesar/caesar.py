@@ -1,4 +1,4 @@
-# create a searchable array pf a common 26-letter alphabet
+# create a searchable array of a common 26-letter alphabet
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 # define our encryption function with two arguements: the plain text and number of letters to shift by
